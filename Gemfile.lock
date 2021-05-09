@@ -134,8 +134,6 @@ GEM
     jekyll-optional-front-matter (0.3.2)
       jekyll (>= 3.0, < 5.0)
     jekyll-paginate (1.1.0)
-    jekyll-polyglot (1.4.1)
-      jekyll (>= 3.0)
     jekyll-readme-index (0.3.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-redirect-from (0.16.0)
@@ -267,7 +265,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 214)
   jekyll-feed (~> 0.12)
-  jekyll-polyglot (~> 1.4)
   jekyll-seo-tag (~> 2.6)
   tzinfo (~> 1.2)
   tzinfo-data
