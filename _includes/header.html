@@ -23,6 +23,7 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          <a href="{{ page.url | replace: site.data.i18n[page.lang].path, "/en/" }}">en</a>
         </div>
       </nav>
     {%- endif -%}

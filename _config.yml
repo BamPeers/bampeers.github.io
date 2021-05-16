@@ -53,3 +53,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  ko:
+    output: true
+  en:
+    output: true
+
+header_pages:
+  - about.markdown
+# include:
+# - _pages
