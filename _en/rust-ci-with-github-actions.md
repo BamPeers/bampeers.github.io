@@ -100,21 +100,21 @@ Any failing job will block merging
 
 ## Clippy
 - The action outputs result (**Clippy Output** added to a random workflow).
-  ![Screen Shot 2021-05-01 at 6.06.28 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qmtp0h9an82orf366f5a.png)
+  ![Screen Shot 2021-05-01 at 6.06.28 PM](/assets/rust-ci-with-github-actions/clippy-output-into-github.png)
 - For pull requests, it adds annotations on the diff.
-  ![Screen Shot 2021-05-01 at 7.43.44 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ld7ym1xfiibdqeob3otv.png)
+  ![Screen Shot 2021-05-01 at 7.43.44 PM](/assets/rust-ci-with-github-actions/pr-annotation-by-clippy.png)
 
 ## Test Result
 - The action outputs the test result (**Test Results** added to a random workflow).
-  ![Screen Shot 2021-05-01 at 6.05.25 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e65gc2awy7pc5m9u7rm5.png)
+  ![Screen Shot 2021-05-01 at 6.05.25 PM](/assets/rust-ci-with-github-actions/test-result-in-github.png)
 - For pull requests, the action adds a comment containing the test results.
-  ![Screen Shot 2021-05-01 at 7.00.21 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kk2baz1fakm8exu1pqcr.png)
+  ![Screen Shot 2021-05-01 at 7.00.21 PM](/assets/rust-ci-with-github-actions/comment-of-test-in-pr.png)
 
 ## Code coverage
 - Code coverage results can be seen on your CodeCov repository.
-  ![Screen Shot 2021-05-01 at 6.56.49 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/byh4punhp9vzvo45uj78.png)
+  ![Screen Shot 2021-05-01 at 6.56.49 PM](/assets/rust-ci-with-github-actions/report-in-codecov.png)
 - For pull requests, the action adds a comment containing the code coverage report.
-  ![Screen Shot 2021-05-01 at 7.00.33 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c2rwexgtiw5eala1hu0b.png)
+  ![Screen Shot 2021-05-01 at 7.00.33 PM](/assets/rust-ci-with-github-actions/comment-of-codecov-report-in-pr.png)
 - You can also add a CodeCov badge on your README to display the coverage percentage like we did on ours. It can be found in the `Setting > Badge` section of your CodeCov repository.
 
 ## Release Packaging
@@ -122,9 +122,9 @@ Any failing job will block merging
 
 ## GitHub Pull Request Checks
 You can set status checks as required for merging in `Settings > Branches > Branch protection rules`.
-![Screen Shot 2021-05-01 at 7.47.38 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/06j2mfk60rpz142jn70c.png)
+![Screen Shot 2021-05-01 at 7.47.38 PM](/assets/rust-ci-with-github-actions/setting-for-github-pr.png)
 When one or more jobs fail, the PR merge box will look something like below:
-![Screen Shot 2021-05-01 at 7.46.21 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6hhkf0batw7un4pbpzzh.png)
+![Screen Shot 2021-05-01 at 7.46.21 PM](/assets/rust-ci-with-github-actions/pr-merge-box-in-github.png)
 
 # Conclusion
 We introduced CI for our Rust project through GitHub Actions. With this, the lint-build-test(+code coverage) process starts automatically when we push our code.

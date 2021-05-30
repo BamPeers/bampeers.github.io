@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GitHub Actions로 하는 Rust CI"
+title: "GitHub Actions를 이용한 Rust CI"
 date: 2021-05-09 16:38:20 +0900
 categories: rust githubactions ci devops
 lang: ko
@@ -95,21 +95,21 @@ env:
 
 ## Clippy
 - 이 액션은 결과물을 임위의 워크플로우에 **Clippy Output** 로 등록한다.
-  ![Screen Shot 2021-05-01 at 6.06.28 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qmtp0h9an82orf366f5a.png)
+  ![Screen Shot 2021-05-01 at 6.06.28 PM](/assets/rust-ci-with-github-actions/clippy-output-into-github.png)
 - 풀 리퀘스트인 경우에 diff 항목에 어노테이션을 추가한다.
-  ![Screen Shot 2021-05-01 at 7.43.44 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ld7ym1xfiibdqeob3otv.png)
+  ![Screen Shot 2021-05-01 at 7.43.44 PM](/assets/rust-ci-with-github-actions/pr-annotation-by-clippy.png)
 
 ## 테스트 결과
 - 이 액션은 결과물을 임위의 워크플로우에 **Test Results** 로 등록한다.
-  ![Screen Shot 2021-05-01 at 6.05.25 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e65gc2awy7pc5m9u7rm5.png)
+  ![Screen Shot 2021-05-01 at 6.05.25 PM](/assets/rust-ci-with-github-actions/test-result-in-github.png)
 - 풀 리퀘스트인 경우에 이 액션은 테스트 결과가 포함된 댓글을 단다.
-  ![Screen Shot 2021-05-01 at 7.00.21 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kk2baz1fakm8exu1pqcr.png)
+  ![Screen Shot 2021-05-01 at 7.00.21 PM](/assets/rust-ci-with-github-actions/comment-of-test-in-pr.png)
 
 ## 코드 커버리지
 - 코드 커비리지 결과는 Codecov 저장소에서 확인할 수 있다.
-  ![Screen Shot 2021-05-01 at 6.56.49 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/byh4punhp9vzvo45uj78.png)
+  ![Screen Shot 2021-05-01 at 6.56.49 PM](/assets/rust-ci-with-github-actions/report-in-codecov.png)
 - 풀 리퀘스트인 경우에 이 액션은 코드 커버리지 리포트를 댓글로 단다.
-  ![Screen Shot 2021-05-01 at 7.00.33 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c2rwexgtiw5eala1hu0b.png)
+  ![Screen Shot 2021-05-01 at 7.00.33 PM](/assets/rust-ci-with-github-actions/comment-of-codecov-report-in-pr.png)
 - README 파일과 같은 곳에 커버리지 범위를 보여주는 CodeCov 뱃지를 달 수 있다.
 
 ## 릴리즈 패키징
@@ -117,9 +117,9 @@ env:
 
 ## Github Pull Request 체크
 `Settings > Branches > Branch protection rules` 에서 머지할 때 빌드 상태 체크를 필수로 설정할 수 있다.
-![Screen Shot 2021-05-01 at 7.47.38 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/06j2mfk60rpz142jn70c.png)
+![Screen Shot 2021-05-01 at 7.47.38 PM](/assets/rust-ci-with-github-actions/setting-for-github-pr.png)
 하나 이상의 작업이 실패했을 때, PR merge box 는 아래와 같이 나오는 것을 확인할 수 있다.
-![Screen Shot 2021-05-01 at 7.46.21 PM](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6hhkf0batw7un4pbpzzh.png)
+![Screen Shot 2021-05-01 at 7.46.21 PM](/assets/rust-ci-with-github-actions/pr-merge-box-in-github.png)
 
 # 결론
 지금까지 Rust 프로젝트를 github-actions을 활용하여 CI를 도입하였고, 이를 통해서 자동적으로 lint, build, test(w/codecov), artifact 생성 기능을 성공적으로 완료하였다.
