@@ -54,7 +54,7 @@ collections:
   en:
     output: true
 
-header_pages:
-  - about.markdown
+#header_pages:
+#  - about.markdown
 # include:
 # - _pages
