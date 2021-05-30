@@ -56,6 +56,9 @@ collections:
     output: true
     permalink: /:collection/:name/
 
+google_analytics:
+  true
+
 #header_pages:
 #  - about.markdown
 # include:
