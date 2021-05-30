@@ -1,11 +1,8 @@
 <header class="site-header" role="banner">
-
+  {% assign i18n_path = page.url | slice: 0, 4 %}
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ i18n_path }}">{{ site.title | escape }}</a>
 
-    {%- if page_paths -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -17,13 +14,6 @@
         </label>
 
         <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-          {% assign i18n_path = page.url | slice: 0, 4 %}
           {% for lang in site.data.i18n %}
             <a href="{{ page.url | replace: i18n_path, lang[1].path }}"
               {% if i18n_path == lang[1].path %}
@@ -33,6 +23,5 @@
           {% endfor %}
         </div>
       </nav>
-    {%- endif -%}
   </div>
 </header>

@@ -46,6 +46,19 @@
     }
   }
 
+  .lang-link {
+    line-height: $base-line-height;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.selected {
+      text-decoration: underline;
+      color: $text-color;
+    }
+  }
+
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
@@ -95,7 +108,15 @@
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
+    }
+
+    .lang-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }
