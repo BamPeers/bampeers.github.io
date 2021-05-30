@@ -2,4 +2,28 @@
 permalink: /
 ---
 
-index.html
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+
+<body>
+    <a href="/ko/"></a>
+    <a href="/en/"></a>
+
+<script>
+    var language = navigator.languages
+        ? navigator.languages[0]
+        : (window.navigator.userLanguage || window.navigator.language);
+    console.log(language);
+
+    if (language.startsWith('ko')) {
+        window.location.replace('{{ site.url }}/ko/');
+    } else {
+        window.location.replace('{{ site.url }}/en/');
+    }
+</script>
+</body>
+
+</html>
