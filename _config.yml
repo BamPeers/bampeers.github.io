@@ -51,8 +51,10 @@ plugins:
 collections:
   ko:
     output: true
+    permalink: /:collection/:name/
   en:
     output: true
+    permalink: /:collection/:name/
 
 #header_pages:
 #  - about.markdown
